@@ -1,6 +1,27 @@
-# azure-openapi-petstore
+# azure-openapi-petstore-example
 OpenAPI Petstore example on Azure
 
+## Compile
 ```
     ./mvnw clean compile  
+```
+
+## Run
+```
+    ./mvnw spring-boot:run
+```
+
+## Swagger Docu
+```
+    http://localhost:8080/swagger-ui/index.html#/
+```
+
+## OpenAPI SPec
+```
+    curl http://localhost:8080/v3/api-docs
+```
+
+## Run example
+```
+    curl http://localhost:8080/v2/pets
 ```
