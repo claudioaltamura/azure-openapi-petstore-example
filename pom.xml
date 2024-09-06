@@ -141,6 +141,7 @@
                                 <basePackage>de.claudioaltamura.azure.openapi.petstore</basePackage>
                                 <sourceFolder>src/main/gen</sourceFolder>
                                 <interfaceOnly>true</interfaceOnly>
+                                <requestMappingMode>api_interface</requestMappingMode>
                                 <skipDefaultInterface>true</skipDefaultInterface>
                                 <openApiNullable>true</openApiNullable>
                                 <documentationProvider>springdoc</documentationProvider>

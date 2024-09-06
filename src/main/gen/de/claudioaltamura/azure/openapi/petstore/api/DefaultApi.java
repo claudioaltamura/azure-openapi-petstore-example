@@ -34,9 +34,10 @@ import java.util.Map;
 import java.util.Optional;
 import jakarta.annotation.Generated;
 
-@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2024-09-04T18:12:42.028037+02:00[Europe/Berlin]", comments = "Generator version: 7.8.0")
+@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2024-09-06T17:50:22.033274+02:00[Europe/Berlin]", comments = "Generator version: 7.8.0")
 @Validated
 @Tag(name = "Default", description = "the Default API")
+@RequestMapping("${openapi.swaggerPetstore.base-path:/v2}")
 public interface DefaultApi {
 
     /**
