@@ -24,7 +24,7 @@ public class PetStoreController implements DefaultApi {
     @Override
     public ResponseEntity<Pet> addPet(@Valid NewPet newPet) {
         var tag = newPet.getTag();
-        pets.putIfAbsent(tag, new ArrayList<Pet>());
+        pets.putIfAbsent(tag, new ArrayList<>());
         var petToAdd = Pet.builder().id(id.getAndIncrement()).name(newPet.getName()).tag(tag).build();
         pets.get(tag).add(petToAdd);
         return ResponseEntity.ok(petToAdd);
