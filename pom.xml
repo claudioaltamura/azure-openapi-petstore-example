@@ -143,6 +143,7 @@
                                 <interfaceOnly>true</interfaceOnly>
                                 <requestMappingMode>api_interface</requestMappingMode>
                                 <skipDefaultInterface>true</skipDefaultInterface>
+                                <generateBuilders>true</generateBuilders>
                                 <openApiNullable>true</openApiNullable>
                                 <documentationProvider>springdoc</documentationProvider>
                                 <useTags>true</useTags>

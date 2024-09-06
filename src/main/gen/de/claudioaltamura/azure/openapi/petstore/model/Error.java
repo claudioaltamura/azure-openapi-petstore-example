@@ -18,7 +18,7 @@ import jakarta.annotation.Generated;
  * Error
  */
 
-@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2024-09-06T17:50:22.033274+02:00[Europe/Berlin]", comments = "Generator version: 7.8.0")
+@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2024-09-06T18:19:57.581735+02:00[Europe/Berlin]", comments = "Generator version: 7.8.0")
 public class Error {
 
   private Integer code;
@@ -115,5 +115,69 @@ public class Error {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
+  public static class Builder {
+
+    private Error instance;
+
+    public Builder() {
+      this(new Error());
+    }
+
+    protected Builder(Error instance) {
+      this.instance = instance;
+    }
+
+    protected Builder copyOf(Error value) { 
+      this.instance.setCode(value.code);
+      this.instance.setMessage(value.message);
+      return this;
+    }
+
+    public Error.Builder code(Integer code) {
+      this.instance.code(code);
+      return this;
+    }
+    
+    public Error.Builder message(String message) {
+      this.instance.message(message);
+      return this;
+    }
+    
+    /**
+    * returns a built Error instance.
+    *
+    * The builder is not reusable (NullPointerException)
+    */
+    public Error build() {
+      try {
+        return this.instance;
+      } finally {
+        // ensure that this.instance is not reused
+        this.instance = null;
+      }
+    }
+
+    @Override
+    public String toString() {
+      return getClass() + "=(" + instance + ")";
+    }
+  }
+
+  /**
+  * Create a builder with no initialized field (except for the default values).
+  */
+  public static Error.Builder builder() {
+    return new Error.Builder();
+  }
+
+  /**
+  * Create a builder with a shallow copy of this instance.
+  */
+  public Error.Builder toBuilder() {
+    Error.Builder builder = new Error.Builder();
+    return builder.copyOf(this);
+  }
+
 }
 

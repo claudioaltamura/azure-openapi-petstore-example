@@ -18,7 +18,7 @@ import jakarta.annotation.Generated;
  * Pet
  */
 
-@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2024-09-06T17:50:22.033274+02:00[Europe/Berlin]", comments = "Generator version: 7.8.0")
+@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2024-09-06T18:19:57.581735+02:00[Europe/Berlin]", comments = "Generator version: 7.8.0")
 public class Pet {
 
   private String name;
@@ -139,5 +139,75 @@ public class Pet {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
+  public static class Builder {
+
+    private Pet instance;
+
+    public Builder() {
+      this(new Pet());
+    }
+
+    protected Builder(Pet instance) {
+      this.instance = instance;
+    }
+
+    protected Builder copyOf(Pet value) { 
+      this.instance.setName(value.name);
+      this.instance.setTag(value.tag);
+      this.instance.setId(value.id);
+      return this;
+    }
+
+    public Pet.Builder name(String name) {
+      this.instance.name(name);
+      return this;
+    }
+    
+    public Pet.Builder tag(String tag) {
+      this.instance.tag(tag);
+      return this;
+    }
+    
+    public Pet.Builder id(Long id) {
+      this.instance.id(id);
+      return this;
+    }
+    
+    /**
+    * returns a built Pet instance.
+    *
+    * The builder is not reusable (NullPointerException)
+    */
+    public Pet build() {
+      try {
+        return this.instance;
+      } finally {
+        // ensure that this.instance is not reused
+        this.instance = null;
+      }
+    }
+
+    @Override
+    public String toString() {
+      return getClass() + "=(" + instance + ")";
+    }
+  }
+
+  /**
+  * Create a builder with no initialized field (except for the default values).
+  */
+  public static Pet.Builder builder() {
+    return new Pet.Builder();
+  }
+
+  /**
+  * Create a builder with a shallow copy of this instance.
+  */
+  public Pet.Builder toBuilder() {
+    Pet.Builder builder = new Pet.Builder();
+    return builder.copyOf(this);
+  }
+
 }
 
