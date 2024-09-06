@@ -1,0 +1,565 @@
+{
+    "item": [
+        {
+            "id": "2fb760c3-6355-429a-b4dd-fcd76e9e8f56",
+            "name": "find Pets",
+            "request": {
+                "name": "find Pets",
+                "description": {
+                    "content": "Returns all pets from the system that the user has access to.",
+                    "type": "text/plain"
+                },
+                "url": {
+                    "path": [
+                        "pets"
+                    ],
+                    "host": [
+                        "{{baseUrl}}"
+                    ],
+                    "query": [
+                        {
+                            "disabled": false,
+                            "description": {
+                                "content": "tags to filter by",
+                                "type": "text/plain"
+                            },
+                            "key": "tags",
+                            "value": "<string>"
+                        },
+                        {
+                            "disabled": false,
+                            "description": {
+                                "content": "tags to filter by",
+                                "type": "text/plain"
+                            },
+                            "key": "tags",
+                            "value": "<string>"
+                        },
+                        {
+                            "disabled": false,
+                            "description": {
+                                "content": "maximum number of results to return",
+                                "type": "text/plain"
+                            },
+                            "key": "limit",
+                            "value": "<integer>"
+                        }
+                    ],
+                    "variable": []
+                },
+                "header": [
+                    {
+                        "key": "Accept",
+                        "value": "application/json"
+                    }
+                ],
+                "method": "GET",
+                "body": {},
+                "auth": null
+            },
+            "response": [
+                {
+                    "id": "057fbdf5-e753-4310-8637-9266010b1543",
+                    "name": "pet response",
+                    "originalRequest": {
+                        "url": {
+                            "path": [
+                                "pets"
+                            ],
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "query": [
+                                {
+                                    "disabled": false,
+                                    "description": {
+                                        "content": "tags to filter by",
+                                        "type": "text/plain"
+                                    },
+                                    "key": "tags",
+                                    "value": "<string>"
+                                },
+                                {
+                                    "disabled": false,
+                                    "description": {
+                                        "content": "maximum number of results to return",
+                                        "type": "text/plain"
+                                    },
+                                    "key": "limit",
+                                    "value": "<integer>"
+                                }
+                            ],
+                            "variable": []
+                        },
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "method": "GET",
+                        "body": {}
+                    },
+                    "status": "OK",
+                    "code": 200,
+                    "header": [
+                        {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                        }
+                    ],
+                    "body": "[\n  {\n    \"id\": \"<long>\",\n    \"name\": \"<string>\",\n    \"tag\": \"<string>\"\n  },\n  {\n    \"id\": \"<long>\",\n    \"name\": \"<string>\",\n    \"tag\": \"<string>\"\n  }\n]",
+                    "cookie": [],
+                    "_postman_previewlanguage": "json"
+                },
+                {
+                    "id": "2138d31a-e7e3-4c37-a726-0210db34d104",
+                    "name": "unexpected error",
+                    "originalRequest": {
+                        "url": {
+                            "path": [
+                                "pets"
+                            ],
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "query": [
+                                {
+                                    "disabled": false,
+                                    "description": {
+                                        "content": "tags to filter by",
+                                        "type": "text/plain"
+                                    },
+                                    "key": "tags",
+                                    "value": "<string>"
+                                },
+                                {
+                                    "disabled": false,
+                                    "description": {
+                                        "content": "maximum number of results to return",
+                                        "type": "text/plain"
+                                    },
+                                    "key": "limit",
+                                    "value": "<integer>"
+                                }
+                            ],
+                            "variable": []
+                        },
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "method": "GET",
+                        "body": {}
+                    },
+                    "status": "Internal Server Error",
+                    "code": 500,
+                    "header": [
+                        {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                        }
+                    ],
+                    "body": "{\n  \"code\": \"<integer>\",\n  \"message\": \"<string>\"\n}",
+                    "cookie": [],
+                    "_postman_previewlanguage": "json"
+                }
+            ],
+            "event": [],
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            }
+        },
+        {
+            "id": "f0ee2cb1-dbc1-4fba-93e1-e356f5abb5f3",
+            "name": "add Pet",
+            "request": {
+                "name": "add Pet",
+                "description": {
+                    "content": "Creates a new pet in the store. Duplicates are allowed",
+                    "type": "text/plain"
+                },
+                "url": {
+                    "path": [
+                        "pets"
+                    ],
+                    "host": [
+                        "{{baseUrl}}"
+                    ],
+                    "query": [],
+                    "variable": []
+                },
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    },
+                    {
+                        "key": "Accept",
+                        "value": "application/json"
+                    }
+                ],
+                "method": "POST",
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"name\": \"<string>\",\n  \"tag\": \"<string>\"\n}",
+                    "options": {
+                        "raw": {
+                            "headerFamily": "json",
+                            "language": "json"
+                        }
+                    }
+                },
+                "auth": null
+            },
+            "response": [
+                {
+                    "id": "2b25ddb7-1973-4657-9d17-34d308463bbb",
+                    "name": "pet response",
+                    "originalRequest": {
+                        "url": {
+                            "path": [
+                                "pets"
+                            ],
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "query": [],
+                            "variable": []
+                        },
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "method": "POST",
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n  \"name\": \"<string>\",\n  \"tag\": \"<string>\"\n}",
+                            "options": {
+                                "raw": {
+                                    "headerFamily": "json",
+                                    "language": "json"
+                                }
+                            }
+                        }
+                    },
+                    "status": "OK",
+                    "code": 200,
+                    "header": [
+                        {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                        }
+                    ],
+                    "body": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"tag\": \"<string>\"\n}",
+                    "cookie": [],
+                    "_postman_previewlanguage": "json"
+                },
+                {
+                    "id": "5fc591b1-2944-4e97-845a-3b917d697ad1",
+                    "name": "unexpected error",
+                    "originalRequest": {
+                        "url": {
+                            "path": [
+                                "pets"
+                            ],
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "query": [],
+                            "variable": []
+                        },
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "method": "POST",
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n  \"name\": \"<string>\",\n  \"tag\": \"<string>\"\n}",
+                            "options": {
+                                "raw": {
+                                    "headerFamily": "json",
+                                    "language": "json"
+                                }
+                            }
+                        }
+                    },
+                    "status": "Internal Server Error",
+                    "code": 500,
+                    "header": [
+                        {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                        }
+                    ],
+                    "body": "{\n  \"code\": \"<integer>\",\n  \"message\": \"<string>\"\n}",
+                    "cookie": [],
+                    "_postman_previewlanguage": "json"
+                }
+            ],
+            "event": [],
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            }
+        },
+        {
+            "id": "a09fc911-4219-4c63-b1de-da1c8ed84728",
+            "name": "find pet by id",
+            "request": {
+                "name": "find pet by id",
+                "description": {
+                    "content": "Returns a user based on a single ID, if the user does not have access to the pet",
+                    "type": "text/plain"
+                },
+                "url": {
+                    "path": [
+                        "pets",
+                        ":id"
+                    ],
+                    "host": [
+                        "{{baseUrl}}"
+                    ],
+                    "query": [],
+                    "variable": [
+                        {
+                            "type": "any",
+                            "value": "<long>",
+                            "key": "id",
+                            "disabled": false,
+                            "description": {
+                                "content": "(Required) ID of pet to fetch",
+                                "type": "text/plain"
+                            }
+                        }
+                    ]
+                },
+                "header": [
+                    {
+                        "key": "Accept",
+                        "value": "application/json"
+                    }
+                ],
+                "method": "GET",
+                "body": {},
+                "auth": null
+            },
+            "response": [
+                {
+                    "id": "a2c87b40-9b02-4768-bee6-257736d796a3",
+                    "name": "pet response",
+                    "originalRequest": {
+                        "url": {
+                            "path": [
+                                "pets",
+                                ":id"
+                            ],
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "query": [],
+                            "variable": []
+                        },
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "method": "GET",
+                        "body": {}
+                    },
+                    "status": "OK",
+                    "code": 200,
+                    "header": [
+                        {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                        }
+                    ],
+                    "body": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"tag\": \"<string>\"\n}",
+                    "cookie": [],
+                    "_postman_previewlanguage": "json"
+                },
+                {
+                    "id": "efb39947-3ffa-4eec-864d-f272372d2ea9",
+                    "name": "unexpected error",
+                    "originalRequest": {
+                        "url": {
+                            "path": [
+                                "pets",
+                                ":id"
+                            ],
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "query": [],
+                            "variable": []
+                        },
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "method": "GET",
+                        "body": {}
+                    },
+                    "status": "Internal Server Error",
+                    "code": 500,
+                    "header": [
+                        {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                        }
+                    ],
+                    "body": "{\n  \"code\": \"<integer>\",\n  \"message\": \"<string>\"\n}",
+                    "cookie": [],
+                    "_postman_previewlanguage": "json"
+                }
+            ],
+            "event": [],
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            }
+        },
+        {
+            "id": "eb5205af-ea27-449d-b19e-5a36fe4e8d87",
+            "name": "delete Pet",
+            "request": {
+                "name": "delete Pet",
+                "description": {
+                    "content": "deletes a single pet based on the ID supplied",
+                    "type": "text/plain"
+                },
+                "url": {
+                    "path": [
+                        "pets",
+                        ":id"
+                    ],
+                    "host": [
+                        "{{baseUrl}}"
+                    ],
+                    "query": [],
+                    "variable": [
+                        {
+                            "type": "any",
+                            "value": "<long>",
+                            "key": "id",
+                            "disabled": false,
+                            "description": {
+                                "content": "(Required) ID of pet to delete",
+                                "type": "text/plain"
+                            }
+                        }
+                    ]
+                },
+                "header": [
+                    {
+                        "key": "Accept",
+                        "value": "application/json"
+                    }
+                ],
+                "method": "DELETE",
+                "body": {},
+                "auth": null
+            },
+            "response": [
+                {
+                    "id": "b55c0e00-4e1f-4417-9f45-1747a317c511",
+                    "name": "pet deleted",
+                    "originalRequest": {
+                        "url": {
+                            "path": [
+                                "pets",
+                                ":id"
+                            ],
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "query": [],
+                            "variable": []
+                        },
+                        "method": "DELETE",
+                        "body": {}
+                    },
+                    "status": "No Content",
+                    "code": 204,
+                    "header": [],
+                    "cookie": [],
+                    "_postman_previewlanguage": "text"
+                },
+                {
+                    "id": "3dce9f30-462b-4d2a-b1d4-ca1e2cd1dbd6",
+                    "name": "unexpected error",
+                    "originalRequest": {
+                        "url": {
+                            "path": [
+                                "pets",
+                                ":id"
+                            ],
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "query": [],
+                            "variable": []
+                        },
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "method": "DELETE",
+                        "body": {}
+                    },
+                    "status": "Internal Server Error",
+                    "code": 500,
+                    "header": [
+                        {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                        }
+                    ],
+                    "body": "{\n  \"code\": \"<integer>\",\n  \"message\": \"<string>\"\n}",
+                    "cookie": [],
+                    "_postman_previewlanguage": "json"
+                }
+            ],
+            "event": [],
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            }
+        }
+    ],
+    "event": [],
+    "variable": [
+        {
+            "key": "baseUrl",
+            "value": "http://localhost:8080/v2"
+        }
+    ],
+    "info": {
+        "_postman_id": "f0d38185-e5c9-478b-9f39-00a5a66cc458",
+        "name": "OpenAPI Petstore example",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "description": {
+            "content": "A sample API that uses a petstore as an example to demonstrate features in the OpenAPI 3.0 specification\n\nContact Support:\n Name: Claudio Altamura\n Email: me@claudioaltamura.de",
+            "type": "text/plain"
+        }
+    }
+}

@@ -2,13 +2,12 @@
   "openapi": "3.0.0",
   "info": {
     "version": "1.0.0",
-    "title": "Swagger Petstore",
+    "title": "OpenAPI Petstore example",
     "description": "A sample API that uses a petstore as an example to demonstrate features in the OpenAPI 3.0 specification",
-    "termsOfService": "http://swagger.io/terms/",
     "contact": {
-      "name": "Swagger API Team",
-      "email": "apiteam@swagger.io",
-      "url": "http://swagger.io"
+      "name": "Claudio Altamura",
+      "email": "me@claudioaltamura.de",
+      "url": "http://claudioaltamura.de"
     },
     "license": {
       "name": "Apache 2.0",
@@ -17,7 +16,7 @@
   },
   "servers": [
     {
-      "url": "https://petstore.swagger.io/v2"
+      "url": "http://localhost:8080/v2"
     }
   ],
   "paths": {

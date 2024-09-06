@@ -25,3 +25,10 @@ OpenAPI Petstore example on Azure
 ```
     curl http://localhost:8080/v2/pets
 ```
+
+## Convert OpenAPI Spec to Postman Collection
+```
+    npm i -g openapi-to-postmanv2 
+    
+    openapi2postmanv2 -s src/main/resources/petstore-expanded.json -o postman-collection.json -p -O folderStrategy=Tags,includeAuthInfoInExample=false
+```
