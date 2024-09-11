@@ -1,9 +1,10 @@
 package de.claudioaltamura.azure.openapi.petstore.controller;
 
 import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.Collection;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicLong;
 
 import org.springframework.http.ResponseEntity;
@@ -17,7 +18,7 @@ import jakarta.validation.Valid;
 @RestController
 public class PetStoreController implements DefaultApi {
 
-    private final Map<String, List<Pet>> pets = new HashMap<>();
+    private final Map<String, List<Pet>> pets = new ConcurrentHashMap<>();
 
     private final AtomicLong id = new AtomicLong(1);
 
@@ -32,14 +33,20 @@ public class PetStoreController implements DefaultApi {
 
     @Override
     public ResponseEntity<Void> deletePet(Long id) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'deletePet'");
+        pets.values()
+                .forEach(petList -> petList.removeIf(pet -> id.equals(pet.getId()))
+                );
+        return ResponseEntity.noContent().build();
     }
 
     @Override
     public ResponseEntity<Pet> findPetById(Long id) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'findPetById'");
+        var foundPet = pets.values()
+                .stream()
+                .flatMap(Collection::stream)
+                .filter(pet -> id.equals(pet.getId()))
+                .findFirst().orElseThrow(IllegalArgumentException::new);
+        return ResponseEntity.ok(foundPet);
     }
 
     @Override
