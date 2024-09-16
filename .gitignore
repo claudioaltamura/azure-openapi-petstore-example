@@ -18,3 +18,4 @@ buildNumber.properties
 /.idea/
 /azure-openapi-petstore.iml
 /test/node_modules/
+/test/test_results.json

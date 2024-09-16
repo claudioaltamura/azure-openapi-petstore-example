@@ -4,7 +4,10 @@
   "description": "software tests",
   "main": "index.js",
   "scripts": {
-    "test": "k6 run index.js"
+    "test": "k6 run loadTest.js --out json=test_results.json"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "k6": "^0.0.0"
+  }
 }
