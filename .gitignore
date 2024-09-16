@@ -17,5 +17,5 @@ buildNumber.properties
 .classpath
 /.idea/
 /azure-openapi-petstore.iml
-/test/node_modules/
-/test/test_results.json
+/test/k6/node_modules/
+/test/k6/test_results.json
