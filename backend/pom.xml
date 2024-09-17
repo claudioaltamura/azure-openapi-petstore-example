@@ -127,7 +127,7 @@
                         </goals>
                         <configuration>
                             <generatorName>spring</generatorName>
-                            <inputSpec>${project.basedir}/src/main/resources/petstore-expanded.json</inputSpec>
+                            <inputSpec>../api/petstore-expanded.json</inputSpec>
                             <library>spring-boot</library>
                             <output>${project.basedir}</output>
                             <apiPackage>de.claudioaltamura.azure.openapi.petstore.api</apiPackage>

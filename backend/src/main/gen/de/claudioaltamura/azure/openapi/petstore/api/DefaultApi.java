@@ -34,7 +34,7 @@ import java.util.Map;
 import java.util.Optional;
 import jakarta.annotation.Generated;
 
-@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2024-09-06T18:19:57.581735+02:00[Europe/Berlin]", comments = "Generator version: 7.8.0")
+@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2024-09-17T16:31:34.688803+02:00[Europe/Berlin]", comments = "Generator version: 7.8.0")
 @Validated
 @Tag(name = "Default", description = "the Default API")
 @RequestMapping("${openapi.openAPIPetstoreExample.base-path:/v2}")

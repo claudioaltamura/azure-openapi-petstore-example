@@ -18,7 +18,7 @@ import jakarta.annotation.Generated;
  * NewPet
  */
 
-@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2024-09-06T18:19:57.581735+02:00[Europe/Berlin]", comments = "Generator version: 7.8.0")
+@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2024-09-17T16:31:34.688803+02:00[Europe/Berlin]", comments = "Generator version: 7.8.0")
 public class NewPet {
 
   private String name;
