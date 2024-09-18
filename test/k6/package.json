@@ -4,7 +4,7 @@
   "description": "software tests",
   "main": "index.js",
   "scripts": {
-    "test": "k6 run loadTest.js --out json=test_results.json"
+    "test": "k6 run smoke-test.js"
   },
   "license": "MIT",
   "dependencies": {
