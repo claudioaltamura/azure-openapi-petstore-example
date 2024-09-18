@@ -1,1 +1,1 @@
-export const BASEURL="http://test.k6.io";
+export const BASEURL="https://openapi-petstore-example.livelyocean-422773ed.westeurope.azurecontainerapps.io/v2";
