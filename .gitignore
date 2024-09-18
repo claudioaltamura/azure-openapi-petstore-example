@@ -19,3 +19,4 @@ buildNumber.properties
 /azure-openapi-petstore.iml
 /test/k6/node_modules/
 /test/k6/test_results.json
+/test/k6/config.js

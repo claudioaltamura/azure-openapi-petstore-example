@@ -1,5 +1,6 @@
 import http from 'k6/http';
 import { sleep } from 'k6';
+import { BASEURL } from './config.js';
 
 export const options = {
   vus: 5,
@@ -7,6 +8,6 @@ export const options = {
 };
 
 export default function () {
-  http.get('http://test.k6.io');
+  http.get(BASEURL);
   sleep(1);
 }
