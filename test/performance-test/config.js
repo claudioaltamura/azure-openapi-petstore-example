@@ -1,1 +1,0 @@
-export const BASEURL="https://openapi-petstore-example.livelyocean-422773ed.westeurope.azurecontainerapps.io/v2";
