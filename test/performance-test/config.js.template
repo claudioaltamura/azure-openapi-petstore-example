@@ -1,1 +1,1 @@
-export const BASEURL="http://test.k6.io";
+export const BASEURL="http://localhost:8080/v2";

@@ -8,6 +8,6 @@ export const options = {
 };
 
 export default function () {
-  http.get(BASEURL);
+  http.get(BASEURL + '/pets?tags=cat&limit=10');
   sleep(1);
 }
