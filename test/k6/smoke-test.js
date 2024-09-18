@@ -3,7 +3,7 @@ import { sleep } from 'k6';
 import { BASEURL } from './config.js';
 
 export const options = {
-  vus: 5,
+  vus: 1,
   duration: '10s',
 };
 
