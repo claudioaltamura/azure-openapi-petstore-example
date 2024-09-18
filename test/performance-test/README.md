@@ -2,7 +2,7 @@
 
 ## Test
 
-### K6
+### Performance Testing
 
 start smoke test
 
