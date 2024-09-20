@@ -18,5 +18,5 @@ buildNumber.properties
 /.idea/
 /azure-openapi-petstore.iml
 /test/performance-test/node_modules/
-/test/performance-test/test_results.json
+/test/performance-test/test_results*.*
 /test/performance-test/config.js
