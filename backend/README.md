@@ -2,34 +2,27 @@
 
 ## Backend
 
-## Compile
+### Compile
 ```
     ./mvnw clean compile  
 ```
 
-## Run
+### Run
 ```
     ./mvnw spring-boot:run
 ```
 
-## Swagger Docu
+### Swagger Docu
 ```
     http://localhost:8080/swagger-ui/index.html#/
 ```
 
-## OpenAPI Spec
+### OpenAPI Spec
 ```
     curl http://localhost:8080/v3/api-docs
 ```
 
-## Run example
+### Run example
 ```
     curl http://localhost:8080/v2/pets
-```
-
-## Convert OpenAPI Spec to Postman Collection
-```
-    npm i -g openapi-to-postmanv2 
-    
-    openapi2postmanv2 -s src/main/resources/petstore-expanded.json -o postman-collection.json -p -O folderStrategy=Tags,includeAuthInfoInExample=false
 ```
