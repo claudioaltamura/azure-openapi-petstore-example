@@ -13,6 +13,14 @@ public class PetStoreGlobalControllerExceptionHandler {
     protected ResponseEntity<de.claudioaltamura.azure.openapi.petstore.model.Error> handleClientError(
             RuntimeException ex) {
         var error = new de.claudioaltamura.azure.openapi.petstore.model.Error(-1, "this shouldn't happened: '" + ex.getMessage() + "'.");
-        return new ResponseEntity<>(error, HttpStatus.BAD_REQUEST);
+        return new ResponseEntity<de.claudioaltamura.azure.openapi.petstore.model.Error>(error, HttpStatus.BAD_REQUEST);
+    }
+
+    @ExceptionHandler(value
+            = { RuntimeException.class })
+    protected ResponseEntity<de.claudioaltamura.azure.openapi.petstore.model.Error> handleServerError(
+            RuntimeException ex) {
+        var error = new de.claudioaltamura.azure.openapi.petstore.model.Error(-1, "server is unavailable.");
+        return new ResponseEntity<de.claudioaltamura.azure.openapi.petstore.model.Error>(error, HttpStatus.INTERNAL_SERVER_ERROR);
     }
 }

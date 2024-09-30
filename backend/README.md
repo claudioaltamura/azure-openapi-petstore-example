@@ -24,5 +24,5 @@
 
 ### Run example
 ```
-    curl http://localhost:8080/v2/pets
+     curl -i 'http://localhost:8080/v2/pets?tags=cat&limit=10'
 ```
