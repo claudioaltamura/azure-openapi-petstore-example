@@ -62,7 +62,6 @@
             <artifactId>jakarta.validation-api</artifactId>
             <version>${jakarta.validation-api.version}</version>
         </dependency>
-
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-engine</artifactId>
@@ -158,6 +157,32 @@
                     </execution>
                 </executions>
             </plugin>
+            <plugin>
+                <groupId>org.openapitools.openapistylevalidator</groupId>
+                <artifactId>openapi-style-validator-maven-plugin</artifactId>
+                <version>1.11</version>
+                <configuration>
+                    <inputFile>../api/petstore-expanded.json</inputFile>
+                    <validateInfoLicense>true</validateInfoLicense>
+                    <validateInfoDescription>true</validateInfoDescription>
+                    <validateInfoContact>true</validateInfoContact>
+                    <validateOperationOperationId>true</validateOperationOperationId>
+                    <validateOperationDescription>true</validateOperationDescription>
+                    <validateOperationTag>true</validateOperationTag>
+                    <validateOperationSummary>true</validateOperationSummary>
+                    <validateModelPropertiesExample>true</validateModelPropertiesExample>
+                    <validateModelPropertiesDescription>true</validateModelPropertiesDescription>
+                    <validateModelRequiredProperties>true</validateModelRequiredProperties>
+                    <validateModelNoLocalDef>false</validateModelNoLocalDef>
+                    <validateNaming>true</validateNaming>
+                    <ignoreHeaderXNaming>false</ignoreHeaderXNaming>
+                    <pathNamingConvention>HyphenCase</pathNamingConvention>
+                    <headerNamingConvention>HyphenUpperCase</headerNamingConvention>
+                    <parameterNamingConvention>CamelCase</parameterNamingConvention>
+                    <propertyNamingConvention>CamelCase</propertyNamingConvention>
+                </configuration>
+            </plugin>
+
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>versions-maven-plugin</artifactId>
